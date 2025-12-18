@@ -2,7 +2,7 @@ package Beginn;
 
 
 
-//Magisches Quadrat programmed on Eclipse IDE
+//programmed on Eclipse IDE
 public class MagicSquare {
 	
 	public static boolean MagicSquareCheck(int [][]arr) 
@@ -14,6 +14,7 @@ public class MagicSquare {
 		if (arr.length != arr[0].length){
 			return false;
 		}
+		//first sum
 		for (int i = 0; i<arr.length;i++) {
 			sum += arr[0][i];
 		}
@@ -30,7 +31,7 @@ public class MagicSquare {
 		
 		
 	}
-			
+	//checking rows with first sum	
 	public static boolean CheckSumZeile(int arr [][], int sum)	{
 		int tempsum;
 		boolean temp = true;
@@ -46,7 +47,7 @@ public class MagicSquare {
 		}
 		return temp;
 	}
-	
+	//checking diagonals with first sum
 	public static boolean CheckDiagonal(int arr[][] ,int sum) {
 		
 		int tempsum = 0;
@@ -63,6 +64,7 @@ public class MagicSquare {
 		}
 		return true;
 	}
+	//checking colums with first sum
 	public static boolean CheckSumSpalte(int arr [][], int sum)	{
 		int tempsum;
 		boolean temp = true;
@@ -79,7 +81,7 @@ public class MagicSquare {
 		return temp;
 	}
 	
-	
+	//Testing the Code with a true example
 	public static void main(String[] args) {
 	int [][] arr = {{1,1,1},{1,1,1},{1,1,1}};
 	System.out.print(MagicSquareCheck(arr));
