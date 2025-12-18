@@ -46,7 +46,7 @@ public class ArrayTesting {
 	}
 	
 	
-	//median, average, smallest and highest number
+	//median, average, smallest and highest number with sorted arrays
 	public static void ArrayMath(int [] array) {
 		int sum = 0;
 		
