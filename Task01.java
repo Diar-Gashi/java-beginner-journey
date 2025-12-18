@@ -77,7 +77,7 @@ public class Task01 {
 		return temp;
 	}
 	
-	
+	//Main-Test sollte true sein in dem Fall
 	public static void main(String[] args) {
 	int [][] arr = {{1,1,1},{1,1,1},{1,1,1}};
 	System.out.print(MagischesQuadrat(arr));
