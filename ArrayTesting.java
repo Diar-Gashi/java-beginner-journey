@@ -1,13 +1,13 @@
 package Beginn;
 
 
-
+//mathematical tesing with arrays and recursive methods
 public class ArrayTesting {
 	
 	
 	
 	
-	
+	//Test-Main output on Console
 	public static void main(String[] args) {
 		
 		int array[] = {1,2,3,4,5,6};
@@ -25,7 +25,7 @@ public class ArrayTesting {
 		
 	}
 	
-	
+	//counting the digits from an Integer
 	public static int Counting(int num) {
 		if (num !=0) {
 			
@@ -33,7 +33,8 @@ public class ArrayTesting {
 		return 0;
 		
 	}
-	
+
+	//Method for the digital root from an Integer
 	public static int Quersumme(int h, int start) {
 		if (h !=0) {
 			start += h%10;
@@ -45,7 +46,7 @@ public class ArrayTesting {
 	}
 	
 	
-	
+	//median, average, smallest and highest number
 	public static void ArrayMath(int [] array) {
 		int sum = 0;
 		
