@@ -2,10 +2,10 @@ package Beginn;
 
 
 
-//programmed on Eclipse IDE
+//Magic-Square method with seperated methods to compare the first sum
 public class MagicSquare {
 	
-	public static boolean MagicSquareCheck(int [][]arr) 
+	public static boolean magicSquareCheck(int [][]arr) 
 	{
 		int sum = 0;
 	
@@ -14,16 +14,18 @@ public class MagicSquare {
 		if (arr.length != arr[0].length){
 			return false;
 		}
-		//first sum
 		for (int i = 0; i<arr.length;i++) {
 			sum += arr[0][i];
 		}
-		if (!CheckSumZeile(arr,sum)) {
+		if (!checkSumRows(arr,sum)) {
+			
 			return false;
 		}
-		if (!CheckSumSpalte(arr,sum)) {
+		if (!checkSumColum(arr,sum)) {
+			
 			return false;
-		}if (!CheckDiagonal(arr,sum)) {
+		}if (!checkDiagonal(arr,sum)) {
+			
 			return false;
 		}
 		return true;
@@ -31,13 +33,17 @@ public class MagicSquare {
 		
 		
 	}
-	//checking rows with first sum	
-	public static boolean CheckSumZeile(int arr [][], int sum)	{
+			
+	public static boolean checkSumRows(int arr [][], int sum)	{
+		
 		int tempsum;
 		boolean temp = true;
+		
 		for (int i = 1; i<arr.length;i++) {
+			
 			tempsum = 0;
 			for (int j = 0;j<arr.length;j++) {
+				
 				tempsum += arr[i][j];
 				
 				
@@ -47,11 +53,12 @@ public class MagicSquare {
 		}
 		return temp;
 	}
-	//checking diagonals with first sum
-	public static boolean CheckDiagonal(int arr[][] ,int sum) {
+	
+	public static boolean checkDiagonal(int arr[][] ,int sum) {
 		
 		int tempsum = 0;
 		int tempsum2 = 0;
+		
 		for (int i = 0; i < arr.length; i++) {
 			 
 				tempsum+=arr[i][i];	
@@ -60,17 +67,21 @@ public class MagicSquare {
 			}
 		
 		if (tempsum != tempsum2 || sum!=tempsum) {
+			
 			return false;
 		}
 		return true;
 	}
-	//checking colums with first sum
-	public static boolean CheckSumSpalte(int arr [][], int sum)	{
+	public static boolean checkSumColum(int arr [][], int sum)	{
+		
 		int tempsum;
 		boolean temp = true;
+		
 		for (int i = 0; i<arr.length;i++) {
+			
 			tempsum = 0;
 			for (int j = 0;j<arr.length;j++) {
+				
 			tempsum += arr[j][i];
 				
 				
@@ -81,10 +92,12 @@ public class MagicSquare {
 		return temp;
 	}
 	
-	//Testing the Code with a true example
+	//Test-main for true Output
 	public static void main(String[] args) {
+		
 	int [][] arr = {{1,1,1},{1,1,1},{1,1,1}};
-	System.out.print(MagicSquareCheck(arr));
+	
+	System.out.print(magicSquareCheck(arr));
 		
 	
 	
